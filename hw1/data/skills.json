@@ -1,0 +1,49 @@
+[
+  {
+    "grouping": "Languages, Operating Systems & Tools",
+    "skills": [
+      {
+        "name": "C/C++",
+        "icon": "CPlusPlus"
+      },
+      "Java",
+      "Python",
+      "git",
+      "linux",
+      "bash"
+    ]
+  },
+  {
+    "grouping": "Data Management",
+    "skills": [
+      {
+        "name": "MySQL",
+        "icon": "MySQL"
+      },
+      {
+        "name": "Redis"
+      }
+    ]
+  },
+  {
+    "grouping": "Architecture",
+    "skills": [
+      {
+        "name": "IP Networking",
+        "icon": "bash"
+      },
+      {
+        "name": "DNS",
+        "icon": "bash"
+      },
+      {
+        "name": "Firewalls",
+        "icon": "bash"
+      },
+      {
+        "name": "RESTful APIs",
+        "icon": "bash"
+      }
+    ]
+  }
+]

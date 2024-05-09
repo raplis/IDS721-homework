@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+  <title>Raplis&#x27;s~</title>
+  
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/saira-extra-condensed@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-sans@4.5.0/index.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.13.0/devicon.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<link rel="stylesheet" href="http://18.218.69.233/main.css">
+
+  
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+
+<script src="http://18.218.69.233/elasticlunr.min.js" defer></script>
+
+<script src="http://18.218.69.233/search_index.en.js" defer></script>
+
+
+
+
+  
+  
+<!-- RSS -->
+
+<link rel="alternate" type="application/atom+xml" title="RSS" href="http://18.218.69.233/atom.xml">
+
+
+  
+
+  
+  
+</head>
+
+<body>
+  <aside id="sidebar" class="menu is-hidden-touch">
+    
+
+<div style="display:block;margin:auto auto 0;padding:.5rem">
+    <figure class="image">
+        <img id="avatar" class="is-rounded" src="http://18.218.69.233/media/avatar.png">
+    </figure>
+</div>
+
+
+    
+<ul id="menu" class="menu-list">
+    
+
+<li data-menuanchor="about"><a href="http://18.218.69.233/#anchor_about">ABOUT</a></li>   
+
+ 
+<li data-menuanchor="education"><a href="http://18.218.69.233/#anchor_education">EDUCATION</a></li>
+
+ 
+<li data-menuanchor="skills"><a href="http://18.218.69.233/#anchor_skills">SKILLS</a></li>
+
+
+<li data-menuanchor="projects"><a href="http://18.218.69.233/#anchor_projects">PROJECTS</a></li>
+
+
+
+
+
+</ul>
+
+  </aside>
+  
+<div class="modal" id="copyTarget">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <section class="modal-card-body">
+      <textarea class="textarea" id="bibtex-content" placeholder="e.g. Hello world"  readonly></textarea>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" id="copyButton">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
+  <div id="content">
+    <!-- Content -->
+    
+<div class="container is-fluid" style="min-height: 100vh;">
+  <div class="is-flex is-flex-direction-column is-justify-content-center" style="min-height: 100vh;">
+    <div>
+      <h1>Open Source Contributions</h1>
+      <div class="content"><p>A collection of efforts to which I contributed, but did not create. Contributing back to Open Source projects is a strong passion of mine, and requires a considerate approach to learn norms, standards and approach for each community for a successful merge!</p>
+</div>
+    </div>
+    
+    <div class="mb-5">
+      <nav class="level mb-0">
+        <div class="level-left">
+          <div class="level-item">
+            <h3 class="post-title"><a href="http:&#x2F;&#x2F;18.218.69.233&#x2F;opensource&#x2F;huggingface-datasets&#x2F;">Huggingface&#x2F;datasets</a></h3>
+          </div>
+          
+        </div>
+        <div class="level-right">
+          <div class="level-item">
+            <span class="post-date">2021-08-28</span>
+          </div>
+        </div>
+      </nav>
+      <div class="is-flex is-flex-direction-row">
+        
+        <div class="content" style="width: 100%;">
+          
+          <figure class="image is-128x128" style="float: left;">
+            
+            <img src="http://18.218.69.233/media/huggingface_logo.svg">
+            
+          </figure>
+          
+          <p>🤗 The largest hub of ready-to-use datasets for ML models with fast, easy-to-use and efficient data manipulation tools</p>
+
+          <a href="http:&#x2F;&#x2F;18.218.69.233&#x2F;opensource&#x2F;huggingface-datasets&#x2F;">Read More</a>
+        </div>
+        
+      </div>
+      
+      <div class="tags">
+        
+        <span class="tag"><a href="/tags/nlp">NLP</a></span>
+        
+        <span class="tag"><a href="/tags/datasets">Datasets</a></span>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+  </div>
+  
+<script>
+  function show_bib(bib_path) {
+    $.ajax({
+      url: bib_path,
+      success: function (data) {
+        $("#bibtex-content").text(data);
+        $("#copyTarget").addClass("is-active");
+      },
+    });
+  }
+
+  document
+    .getElementById("copyButton")
+    .addEventListener("click", function () {
+      var copyText = document.getElementById("bibtex-content");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      $("#copyTarget").removeClass("is-active");
+    });
+</script>
+
+  
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/dist/fullpage.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js@3.1.2/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript">
+    var fullpages = new fullpage('#fullpage', {
+        menu: '#menu',
+        setRecordHistory: false,
+        anchors: [
+             'anchor_about',         
+             'anchor_education',     
+             'anchor_skills',        
+             'anchor_projects',      
+            
+            
+            
+            
+        ],
+        afterResize: function( width, height ){
+		    if (width < 936) {
+                fullpage_api.setAutoScrolling(false);
+            } else {
+                fullpage_api.setAutoScrolling(true);
+            }
+	    }
+    });
+    if (screen.width < 936){
+        fullpages.setAutoScrolling(false);
+    }
+
+</script>
+
+</body>
+
+</html>

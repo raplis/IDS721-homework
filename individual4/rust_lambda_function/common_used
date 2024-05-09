@@ -1,0 +1,6 @@
+#!/bin/bash
+cp ./target/x86_64-unknown-linux-musl/release/rust_lambda_function ./target/x86_64-unknown-linux-musl/release/bootstrap
+zip -j my_lambda_function.zip ./target/x86_64-unknown-linux-musl/release/bootstrap
+aws lambda update-function-code --function-name div3 --zip-file fileb://my_lambda_function.zip --region us-east-1
+#cargo build --release --target x86_64-unknown-linux-musl
+#aws lambda create-function --function-name div31 --zip-file fileb://my_lambda_function1.zip --handler rust_lambda --runtime provided.al2 --role arn:aws:iam::092592854796:role/lambda_builder --timeout 15 --memory-size 128 --region us-east-1

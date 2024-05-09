@@ -1,0 +1,31 @@
+base_url = "http://18.218.69.233/"
+compile_sass = true
+title = "Raplis's~"
+description = "course for IDS721"
+generate_feed = true
+build_search_index = true
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "OneHalfLight"
+
+[extra]
+first_name = "Yunze"
+last_name = "Zhang"
+address = "Durham, NC"
+email = "yunze.zhang@duke.edu"
+favicon = "/favicon.ico"
+avatar = "/media/avatar.png"
+
+katex = false
+show_about = true
+show_skills = true
+show_projects = true
+show_opensource = false
+show_publications = false
+show_experience = false
+show_education = true
+show_blog = false
